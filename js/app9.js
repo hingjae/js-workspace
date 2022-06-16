@@ -19,6 +19,12 @@ const colors = [
   "#ff3f34",
 ];
 const btn = document.querySelector(".btn");
-const background = document.body;
-function changeBackground() {}
+const body = document.querySelector("body");
+function changeBackground() {
+  const color1 = colors[Math.floor(Math.random() * colors.length)];
+  const color2 = colors[Math.floor(Math.random() * colors.length)];
+  body.style.background = `linear-gradient(.25turn, ${color1},${color2})`;
+}
 btn.addEventListener("click", changeBackground);
+
+//interval & animation
